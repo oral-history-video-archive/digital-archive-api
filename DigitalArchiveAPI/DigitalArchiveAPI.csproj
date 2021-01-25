@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <SpaRoot>Angular\</SpaRoot>
+    <!--
+      The following setting fixes a build+publish issue with Swashbuckle and .NET Core 3.0
+      See: https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/1266 
+      bm3n 22-OCT-2019
+    -->
+    <OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
+    <!--
+      Required for the inclusion of documentation headers in Swagger UI
+      See: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.0&tabs=visual-studio
+    -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <UserSecretsId>23d72784-bc3f-4220-bb59-f12aff612c8a</UserSecretsId>
+    <Authors>Bryan Maher &lt;bm3n@andrew.cmu.edu&gt;, Mike Christel &lt;christel@cmu.edu&gt;</Authors>
+    <Company>Carnegie Mellon University</Company>
+    <Product>The HistoryMakers Digital Archive</Product>
+    <Copyright>2021 Carnegie Mellon University</Copyright>
+    <RepositoryUrl>https://github.com/oral-history-video-archive/digital-archive-api</RepositoryUrl>
+    <AssemblyVersion>2021.01.14.1630</AssemblyVersion>
+    <Description>The HistoryMakers Digital Archive API</Description>
+    <PackageProjectUrl>https://thehistorymakers.org</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Azure.Search" Version="10.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
+    <PackageReference Include="Sendgrid" Version="9.22.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$(SpaRoot)dist\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+</Project>

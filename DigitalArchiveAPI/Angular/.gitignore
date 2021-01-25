@@ -1,0 +1,8 @@
+# DO NOT ALTER / DO NOT REMOVE
+# This file makes sure the [empty] folder is kept as part of the project
+# but prevents the contents from being tracked by git.
+
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
