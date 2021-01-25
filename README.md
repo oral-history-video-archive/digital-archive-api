@@ -1,6 +1,6 @@
 # digital-archive-api
 
-The server-side API (a.k.a backend) which supplies data to The HistoryMakers Digital Video Archive web application. 
+The server-side API (a.k.a. backend) which supplies data to The HistoryMakers Digital Video Archive web application. 
 It is written in C# using [.NET 5.0](https://dotnet.microsoft.com/download) and compiled with Visual Studio 2019
 using the standard .NET Core Web API template.  The API most closely resembles a stateless view controller using JSON as the serialization protocol. 
 
@@ -9,8 +9,8 @@ using the standard .NET Core Web API template.  The API most closely resembles a
 
 The following will work under normal circumstances:
 
-1. Clone repository to local machine
-2. Open solution file with Visual Studio 2019
+1. Clone repository to local machine.
+2. Open solution file with Visual Studio 2019.
 3. Run debugger - Visual Studio will automatically install dependency packages prior to compiling the application.
 
 ## Build / Runtime Environments
