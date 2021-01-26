@@ -1,6 +1,6 @@
 # digital-archive-api
 
-The server-side API (a.k.a. backend) which supplies data to The HistoryMakers Digital Video Archive web application. 
+The server-side API (a.k.a. backend) which supplies data to oral history video archive web applications such as The HistoryMakers Digital Video Archive. 
 It is written in C# using [.NET 5.0](https://dotnet.microsoft.com/download) and compiled with Visual Studio 2019
 using the standard .NET Core Web API template.  The API most closely resembles a stateless view controller using JSON as the serialization protocol. 
 
